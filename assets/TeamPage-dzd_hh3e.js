@@ -1,4 +1,4 @@
-import{i as d,j as e,L as x,F as p,k as h,r as m,u}from"./index-D36Wo0vM.js";import{B as f}from"./BannerComponent-Byiju2kq.js";import{r as j}from"./api-BquQdLFU.js";import{A as g}from"./ArrowRight-BLyo8a-k.js";const b=({appUserId:r,src:n,userName:t,title:a,facebookLink:s,telegramLink:l})=>{const o=d();function i(c){o(c)}return e.jsxs("div",{className:`
+import{i as d,j as e,L as x,F as p,k as h,r as m,u}from"./index-C9hUWqP-.js";import{B as f}from"./BannerComponent-Bkq0IqZm.js";import{r as j}from"./api-BquQdLFU.js";import{A as g}from"./ArrowRight-BckrwtWc.js";const b=({appUserId:r,src:n,userName:t,title:a,facebookLink:s,telegramLink:l})=>{const o=d();function i(c){o(c)}return e.jsxs("div",{className:`
   flex w-full max-w-sm flex-col items-center justify-center gap-y-6 text-center
   p-4 
   border-3 border-[#D4AF3780]
