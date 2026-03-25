@@ -28,9 +28,12 @@ const BannerComponent = ({ imageBanner, pathname, pageName }) => {
               <div key={index}>
                 <div className="relative" style={contentStyle}>
                   <img
-                    src={`http://localhost:8080/api/v1/files/preview-file?fileName=${img}`}
+                    src={`https://deploy-backend-production-f9c1.up.railway.app/api/v1/files/preview-file?fileName=${img}`}
                     alt={img}
-                    className={["w-full object-cover brightness-60", bannerHeightClass].join(" ")}
+                    className={[
+                      "w-full object-cover brightness-60",
+                      bannerHeightClass,
+                    ].join(" ")}
                   />
                 </div>
               </div>
@@ -51,13 +54,19 @@ const BannerComponent = ({ imageBanner, pathname, pageName }) => {
         <>
           <div>
             <div
-              className={["relative flex items-center justify-center bg-red-600", bannerHeightClass].join(" ")}
+              className={[
+                "relative flex items-center justify-center bg-red-600",
+                bannerHeightClass,
+              ].join(" ")}
               style={contentStyle}
             >
               <img
                 src={singleBanner}
                 alt="Page banner"
-                className={["w-full brightness-50 object-cover", bannerHeightClass].join(" ")}
+                className={[
+                  "w-full brightness-50 object-cover",
+                  bannerHeightClass,
+                ].join(" ")}
               />
               <h1 className="absolute rounded-4xl bg-black/70 px-6 py-4 text-center text-3xl font-bold text-white sm:text-5xl lg:text-6xl">
                 {pageName}

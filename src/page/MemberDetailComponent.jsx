@@ -50,7 +50,7 @@ const MemeberDetailComponent = () => {
           <div className="flex justify-center">
             <img
               className="h-auto w-full max-w-xs rounded-xl object-cover shadow-sm sm:max-w-sm"
-              src={`http://localhost:8080/api/v1/files/preview-file?fileName=${fileName}`}
+              src={`https://deploy-backend-production-f9c1.up.railway.app/api/v1/files/preview-file?fileName=${fileName}`}
               alt=""
             />
           </div>

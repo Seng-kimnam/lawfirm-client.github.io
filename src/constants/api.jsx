@@ -7,8 +7,8 @@ export const request = (url, method, data, contentType) => {
     Accept: "application/json",
   };
   return axios({
-    // http://localhost:8080/api/v1
-    url: "http://localhost:8080/api/v1" + url,
+    // https://deploy-backend-production-f9c1.up.railway.app/api/v1
+    url: "https://deploy-backend-production-f9c1.up.railway.app/api/v1" + url,
     method: method,
     data: data,
     headers: headers,

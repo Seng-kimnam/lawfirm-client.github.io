@@ -30,7 +30,7 @@ const TeamCardComponent = ({
     >
       <img
         className="h-64 w-full rounded-md object-contain sm:h-72"
-        src={`http://localhost:8080/api/v1/files/preview-file?fileName=${src}`}
+        src={`https://deploy-backend-production-f9c1.up.railway.app/api/v1/files/preview-file?fileName=${src}`}
         alt={src}
         title={userName}
       />

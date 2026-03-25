@@ -18,8 +18,8 @@ const PdfViewer = ({ docId, fileCover, fileUrl, title }) => {
       <Dialog>
         <DialogTrigger asChild>
           <img
-            className="aspect-[4/5] w-full rounded-md object-cover"
-            src={`http://localhost:8080/api/v1/files/preview-file?fileName=${fileCover}`}
+            className="aspect-4/5 w-full rounded-md object-cover"
+            src={`https://deploy-backend-production-f9c1.up.railway.app/api/v1/files/preview-file?fileName=${fileCover}`}
             alt={fileCover}
           />
         </DialogTrigger>
@@ -31,7 +31,7 @@ const PdfViewer = ({ docId, fileCover, fileUrl, title }) => {
           </DialogHeader>
           <EmbeddedPdfViewer
             key={docId}
-            fileUrl={`http://localhost:9000/lawfirm-bucket/${fileUrl}`}
+            fileUrl={`http://192.168.137.174:9000/lawfirm-bucket/${fileUrl}`}
             title={title}
           />
           {/* Hello */}

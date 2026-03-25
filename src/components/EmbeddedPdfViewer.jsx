@@ -1,10 +1,8 @@
-const EmbeddedPdfViewer = ({ docId ,  fileUrl,  title }) => {
+const EmbeddedPdfViewer = ({ docId, fileUrl, title }) => {
   return (
     <div style={{ height: "75vh", width: "100%" }}>
-      
       <iframe
-      
-      key={docId}
+        key={docId}
         src={fileUrl}
         title={title}
         width="100%"
@@ -18,5 +16,5 @@ const EmbeddedPdfViewer = ({ docId ,  fileUrl,  title }) => {
 
 export default EmbeddedPdfViewer;
 // Usage example:
-// const url = "http://localhost:9000/lawfirm-bucket/..."
+// const url = "http://192.168.137.174:9000/lawfirm-bucket/..."
 // <EmbeddedPdfViewer pdfUrl={url} title="AWS Reserve Confirmation" />

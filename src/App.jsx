@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./layout/RootLayout";
 
 const HomePage = lazy(() => import("./page/HomePage"));
@@ -11,33 +11,25 @@ const MemeberDetailComponent = lazy(() =>
   import("./page/MemberDetailComponent")
 );
 
-const routers = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <RootLayout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: "/about-us", element: <AboutUsPage /> },
-      { path: "/contact-us", element: <ContactUsPage /> },
-      { path: "/documents", element: <DocumentPage /> },
-      { path: "/our-team/:id", element: <MemeberDetailComponent /> },
-      { path: "/our-team", element: <TeamPage /> },
+      { path: "about-us", element: <AboutUsPage /> },
+      { path: "contact-us", element: <ContactUsPage /> },
+      { path: "documents", element: <DocumentPage /> },
+      { path: "our-team/:id", element: <MemeberDetailComponent /> },
+      { path: "our-team", element: <TeamPage /> },
     ],
   },
 ]);
 
-const App = () => {
+export default function App() {
   return (
-    // <Suspense
-    //   fallback={
-    //     <div className="fixed inset-0 text-2xl font-bold text-gray-700 z-10  flex justify-center items-center bg-white">
-    //       <span className="loader"></span>
-    //     </div>
-    //   }
-    // >
-    <RouterProvider router={routers} />
-    // </Suspense>
+    <Suspense fallback={<div>Loading...</div>}>
+      <RouterProvider router={router} />
+    </Suspense>
   );
-};
-
-export default App;
+}
